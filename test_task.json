@@ -1,0 +1,19 @@
+{
+  "inputs": {
+    "x1": {"type": "tsp", "mu": 0.1, "u": 0.164, "c1": -0.27, "c2": 0.37, "cov_prob": 0.95},
+    "x2": {"type": "tsp", "histogram_path": "test_hist.txt"},
+    "x3": {"type": "normal", "mu": 1.0, "u": 0.01}
+  },
+  "correlations": [[1.0, 0.2, 0.0], [0.2, 1.0, 0.0], [0.0, 0.0, 1.0]],
+  "subexpressions": [
+    "(1.1 + sin(x1)) * cos(3 * x1)",
+    "1 + exp(1 + 0.1 * cos(x2))"
+  ],
+  "transform": "sub_0 / sub_1 + 1.2 * x3**(4/3)",
+  "n_trials": 2000000,
+  "n_digs": 3,
+  "coverage_interval_type": "probabilistically_symmetric",
+  "coverage_probability": 0.95,
+  "add_histogram": true,
+  "n_histogram_bins": 200
+}
