@@ -31,6 +31,6 @@ Usage:
 ```
 python mc.py path/to/task.json
 ```
-For an example of the task description please see [an example](./test_input.json)
+For an example of the task description please see [an example](./test_task.json)
 
 The output will be saved in the same folder
